@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "label": "API Explorer",
+      "description": "API Explorer application",
+      "path": "/api-explorer",
+      "domain": "Platform"
+    },
+    {
+      "label": "Platform Manifest",
+      "description": "Read Only service exposing Pltatform configuration parameters",
+      "path": "/manifest",
+      "domain": "Platform"
+    },
+    {
+      "label": "Realms Management",
+      "description": "Realms Management application",
+      "path": "/realms",
+      "domain": "Platform"
+    },
+    {
+      "label": "UX Config Management",
+      "description": "UX Config Management application",
+      "path": "/uxconfig",
+      "domain": "Platform"
+    }
+  ]
+}
