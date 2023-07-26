@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useEffect, useState } from "react";
 import {
   DxcApplicationLayout,
@@ -70,52 +71,27 @@ const MainServices = ({ data }) => {
             />
             <DxcInset space="0rem" vertical="5rem">
               <DxcFlex gap="3rem">
-                <DxcBox shadowDepth={0}>
-                  <DxcFlex direction="column" gap="0.25rem">
-                    <DxcParagraph>Billing payments</DxcParagraph>
-                    <DxcHeading text="Billing Payments" level={2} />
-                    <DxcLink
-                      href="#"
-                      icon="https://img.icons8.com/ios-glyphs/30/000000/arrow.png"
-                      iconPosition="after"
-                    >
-                      Billing payments
-                    </DxcLink>
-                  </DxcFlex>
-                </DxcBox>
-                <DxcBox shadowDepth={0}>
-                  <DxcFlex direction="column" gap="0.25rem">
-                    <DxcParagraph>
-                      User profile management for your applications
-                    </DxcParagraph>
-                    <DxcHeading text="Realms Configuration" level={2} />
-                    <DxcLink
-                      // href="/realms"
-                      href={
-                        data?.find((link) => link.label === "Realms Management")
-                          .path
-                      }
-                      icon="https://img.icons8.com/ios-glyphs/30/000000/arrow.png"
-                      iconPosition="after"
-                      newWindow={false}
-                    >
-                      Start configuring users
-                    </DxcLink>
-                  </DxcFlex>
-                </DxcBox>
-                <DxcBox shadowDepth={0}>
-                  <DxcFlex direction="column" gap="0.25rem">
-                    <DxcParagraph>Financials for Life and P&C</DxcParagraph>
-                    <DxcHeading text="Financials for Life and P&C" level={2} />
-                    <DxcLink
-                      href="#"
-                      icon="https://img.icons8.com/ios-glyphs/30/000000/arrow.png"
-                      iconPosition="after"
-                    >
-                      Financials for Life and P&C
-                    </DxcLink>
-                  </DxcFlex>
-                </DxcBox>
+                {data.length === 0 ? (
+                  <>No data</>
+                ) : (
+                  data.map((item, index) => {
+                    return (
+                      <DxcBox key={index} shadowDepth={0}>
+                        <DxcFlex direction="column" gap="0.25rem">
+                          <DxcParagraph>{item.description}</DxcParagraph>
+                          <DxcHeading text={item.label} level={2} />
+                          <DxcLink
+                            href={item.path}
+                            icon="https://img.icons8.com/ios-glyphs/30/000000/arrow.png"
+                            iconPosition="after"
+                          >
+                            {item.linkText}
+                          </DxcLink>
+                        </DxcFlex>
+                      </DxcBox>
+                    );
+                  })
+                )}
               </DxcFlex>
             </DxcInset>
           </DxcFlex>

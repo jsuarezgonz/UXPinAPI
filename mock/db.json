@@ -3,25 +3,29 @@
     {
       "label": "API Explorer",
       "description": "API Explorer application",
+      "linkText": "API Explorer",
       "path": "/api-explorer",
       "domain": "Platform"
     },
     {
       "label": "Platform Manifest",
-      "description": "Read Only service exposing Pltatform configuration parameters",
+      "description": "Service exposing Platform config parameters",
+      "linkText": "Platform Manifest",
       "path": "/manifest",
       "domain": "Platform"
     },
     {
+      "description": "User profile management for your applications",
       "label": "Realms Management",
-      "description": "Realms Management application",
+      "linkText": "Start configuring users",
       "path": "/realms",
       "domain": "Platform"
     },
     {
-      "label": "UX Config Management",
-      "description": "UX Config Management application",
+      "label": "UX Configuration",
+      "description": "Custom branding for your applications",
       "path": "/uxconfig",
+      "linkText": "Start branding applications",
       "domain": "Platform"
     }
   ]
